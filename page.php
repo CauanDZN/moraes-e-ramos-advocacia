@@ -174,7 +174,7 @@ get_header();
 				<div class="mt-14 grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
 					<!-- Kamila -->
 					<div class="flex flex-col md:flex-row items-center text-center md:text-left gap-8">
-						<img class="w-48 h-48 rounded-full object-cover object-top shadow-xl" src="<?php echo esc_url( get_template_directory_uri() . '/image_5370a8.jpg' ); ?>" alt="Dra. Kamila Ramos" />
+						<img class="w-48 h-48 rounded-full object-cover object-top shadow-xl" src="<?php echo esc_url( 'https://moraesramosadvocacia.com.br/wp-content/uploads/2025/12/kamila.jpg' ); ?>" alt="Dra. Kamila Ramos" />
 						<div>
 							<h3 class="font-display text-2xl md:text-3xl font-bold">Dra. Kamila Ramos</h3>
 							<p class="text-brand-red font-semibold mt-2">Sócia-Fundadora | Gestora Jurídica</p>
@@ -186,7 +186,7 @@ get_header();
 					</div>
 					<!-- Nicole -->
 					<div class="flex flex-col md:flex-row items-center text-center md:text-left gap-8">
-						<img class="w-48 h-48 rounded-full object-cover object-top shadow-xl" src="<?php echo esc_url( get_template_directory_uri() . '/image_5370c0.jpg' ); ?>" alt="Dra. Nicole Moraes" />
+						<img class="w-48 h-48 rounded-full object-cover object-top shadow-xl" src="<?php echo esc_url( 'https://moraesramosadvocacia.com.br/wp-content/uploads/2025/12/nicole.jpg' ); ?>" alt="Dra. Nicole Moraes" />
 						<div>
 							<h3 class="font-display text-2xl md:text-3xl font-bold">Dra. Nicole Moraes</h3>
 							<p class="text-brand-red font-semibold mt-2">Sócia-Fundadora | Assessora Jurídica</p>
@@ -320,5 +320,4 @@ get_header();
 </main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

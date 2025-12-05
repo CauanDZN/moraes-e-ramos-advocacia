@@ -80,16 +80,16 @@
 
 				<!-- Navegação desktop -->
 				<nav class="hidden lg:flex items-center gap-8 text-sm tracking-widebrand uppercase">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>#inicio" class="hover:text-brand-red transition">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>#inicio" class="text-brand-ink hover:text-brand-red transition">
 						<?php esc_html_e( 'Início', 'mradvocacia' ); ?>
 					</a>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>#sobre" class="hover:text-brand-red transition">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>#sobre" class="text-brand-ink hover:text-brand-red transition">
 						<?php esc_html_e( 'Sobre', 'mradvocacia' ); ?>
 					</a>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>#areas" class="hover:text-brand-red transition">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>#areas" class="text-brand-ink hover:text-brand-red transition">
 						<?php esc_html_e( 'Áreas', 'mradvocacia' ); ?>
 					</a>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>#socias" class="hover:text-brand-red transition">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>#socias" class="text-brand-ink hover:text-brand-red transition">
 						<?php esc_html_e( 'Sócias', 'mradvocacia' ); ?>
 					</a>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>#contato" class="inline-flex items-center rounded-full bg-brand-red px-5 py-3 font-semibold text-white shadow-lg hover:bg-brand-red900 transition">
@@ -109,16 +109,16 @@
 		<!-- Menu mobile -->
 		<div class="lg:hidden" x-show="open" x-transition @click.away="open=false">
 			<div class="border-t border-neutral-200 bg-white px-6 py-4 space-y-3 text-sm tracking-widebrand uppercase">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>#inicio" class="block hover:text-brand-red" @click="open=false">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>#inicio" class="block text-brand-ink hover:text-brand-red" @click="open=false">
 					<?php esc_html_e( 'Início', 'mradvocacia' ); ?>
 				</a>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>#sobre" class="block hover:text-brand-red" @click="open=false">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>#sobre" class="block text-brand-ink hover:text-brand-red" @click="open=false">
 					<?php esc_html_e( 'Sobre', 'mradvocacia' ); ?>
 				</a>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>#areas" class="block hover:text-brand-red" @click="open=false">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>#areas" class="block text-brand-ink hover:text-brand-red" @click="open=false">
 					<?php esc_html_e( 'Áreas', 'mradvocacia' ); ?>
 				</a>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>#socias" class="block hover:text-brand-red" @click="open=false">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>#socias" class="block text-brand-ink hover:text-brand-red" @click="open=false">
 					<?php esc_html_e( 'Sócias', 'mradvocacia' ); ?>
 				</a>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>#contato" class="block rounded-full bg-brand-red px-5 py-3 font-semibold text-white text-center hover:bg-brand-red900" @click="open=false">
