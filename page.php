@@ -19,7 +19,7 @@ get_header();
 			<!-- Imagem de fundo cobrindo 100% -->
 			<div class="absolute inset-0 -z-10">
 				<!-- Substitua pelo arquivo real da sua foto -->
-				<img src="<?php echo esc_url( 'https://moraesramosadvocacia.com.br/wp-content/uploads/2025/12/LOGO-1-scaled.png' ); ?>" alt="" class="h-full w-full object-cover" />
+				<img src="<?php echo esc_url( 'https://moraesramosadvocacia.com.br/wp-content/uploads/2025/12/capa_mradvocacia-scaled-e1765287625361.png' ); ?>" alt="" class="h-full w-full object-cover" />
 				<!-- Overlay vinho para manter a identidade da marca -->
 				<div class="absolute inset-0 bg-brand-red/60"></div>
 			</div>
@@ -32,7 +32,7 @@ get_header();
 					Soluções jurídicas em âmbito nacional, com foco em resultados e transparência.
 				</p>
 				<div class="mt-10 flex items-center justify-center gap-4">
-					<a href="#contato" class="rounded-full bg-white text-brand-red px-7 py-4 font-semibold shadow-lg hover:bg-brand-cream transition">
+					<a href="#contato" class="rounded-full bg-brand-red text-white hover:bg-brand-red900 px-7 py-4 font-semibold shadow-lg hover:bg-brand-cream transition">
 						Quero falar com uma especialista
 					</a>
 					<a href="#areas" class="rounded-full border border-white/60 px-7 py-4 font-semibold hover:bg-white/10 transition">

@@ -53,6 +53,22 @@
 		}
 	</script>
 
+	<style>
+		a {
+			color: inherit !important;
+			text-decoration: none !important;
+		}
+
+		a:hover {
+			text-decoration: none !important;
+			color: inherit;
+		}
+
+		.menu-agende {
+			color: #ffffff !important;
+		}
+	</style>
+
 	<?php wp_head(); ?>
 </head>
 
@@ -92,7 +108,7 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>#socias" class="text-brand-ink hover:text-brand-red transition">
 						<?php esc_html_e( 'Sócias', 'mradvocacia' ); ?>
 					</a>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>#contato" class="inline-flex items-center rounded-full bg-brand-red px-5 py-3 font-semibold text-white shadow-lg hover:bg-brand-red900 transition">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>#contato" class="menu-agende inline-flex items-center rounded-full bg-brand-red px-5 py-3 font-semibold text-white shadow-lg hover:bg-brand-red900 transition">
 						<?php esc_html_e( 'Agende sua consulta', 'mradvocacia' ); ?>
 					</a>
 				</nav>
