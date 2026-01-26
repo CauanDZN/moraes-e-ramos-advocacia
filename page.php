@@ -8,6 +8,15 @@
  */
 
 get_header();
+
+// WhatsApp (E.164) + mensagem padrão
+$whats_msg    = rawurlencode('Olá! Gostaria de agendar uma consulta.');
+$whats_kamila = '5585992554242'; // (85) 99255-4242
+$whats_nicole = '5585991144047'; // (85) 99114-4047
+
+// Vídeos (MP4)
+$video_historia = 'https://moraesramosadvocacia.com.br/wp-content/uploads/2026/01/como_tudo_comecou.mp4';
+$video_areas    = 'https://moraesramosadvocacia.com.br/wp-content/uploads/2026/01/areas_de_atuacao.mp4';
 ?>
 
 <main id="primary" class="site-main">
@@ -18,23 +27,28 @@ get_header();
 		<section id="inicio" class="relative isolate text-white">
 			<!-- Imagem de fundo cobrindo 100% -->
 			<div class="absolute inset-0 -z-10">
-				<!-- Substitua pelo arquivo real da sua foto -->
-				<img src="<?php echo esc_url( 'https://moraesramosadvocacia.com.br/wp-content/uploads/2025/12/capa_mradvocacia-scaled-e1765287625361.png' ); ?>" alt="" class="h-full w-full object-cover" />
-				<!-- Overlay vinho para manter a identidade da marca -->
-				<div class="absolute inset-0 bg-brand-red/60"></div>
+				<img src="<?php echo esc_url( 'https://moraesramosadvocacia.com.br/wp-content/uploads/2026/01/capa-mr-moraes.png' ); ?>" alt="" class="h-full w-full object-cover" />
+				<!-- Overlay CINZA (mais neutro e congruente) -->
+				<div class="absolute inset-0 bg-neutral-900/45"></div>
 			</div>
 
-			<div class="max-w-7xl mx-auto px-6 lg:px-8 min-h-[100svh] flex flex-col items-center justify-center text-center">
+			<div class="max-w-7xl mx-auto px-6 lg:px-8 min-h-[100svh] flex flex-col items-center justify-end text-center pb-24">
 				<h1 class="font-display text-4xl md:text-6xl font-bold leading-tight">
 					Advocacia Moderna, Estratégica e Eficiente
 				</h1>
 				<p class="mt-6 text-lg md:text-xl text-white/90 max-w-3xl">
 					Soluções jurídicas em âmbito nacional, com foco em resultados e transparência.
 				</p>
-				<div class="mt-10 flex items-center justify-center gap-4">
-					<a href="#contato" class="rounded-full bg-brand-red text-white hover:bg-brand-red900 px-7 py-4 font-semibold shadow-lg hover:bg-brand-cream transition">
-						Quero falar com uma especialista
+
+				<div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+					<!-- CTA principal mais direto -->
+					<a href="#contato"
+						class="inline-flex items-center justify-center rounded-full bg-brand-red px-6 py-3 font-semibold text-white shadow hover:bg-brand-red900 transition"
+						style="color:#fff !important;">
+						Fale com uma especialista
 					</a>
+
+
 					<a href="#areas" class="rounded-full border border-white/60 px-7 py-4 font-semibold hover:bg-white/10 transition">
 						Áreas de atuação
 					</a>
@@ -57,6 +71,7 @@ get_header();
 						Nossa missão é descomplicar o direito, prestando um serviço transparente, ético e focado nos objetivos dos nossos clientes – do previdenciário ao empresarial.
 					</p>
 				</div>
+
 				<div class="space-y-6">
 					<div class="flex items-start gap-4">
 						<div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-red/10 text-brand-red">
@@ -70,6 +85,7 @@ get_header();
 							<p class="text-neutral-600">Atendimento digital e eficiente em todo o Brasil.</p>
 						</div>
 					</div>
+
 					<div class="flex items-start gap-4">
 						<div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-red/10 text-brand-red">
 							<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -81,6 +97,7 @@ get_header();
 							<p class="text-neutral-600">Reconhecimento de clientes no Google.</p>
 						</div>
 					</div>
+
 					<div class="flex items-start gap-4">
 						<div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-red/10 text-brand-red">
 							<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -92,6 +109,95 @@ get_header();
 							<p class="text-neutral-600">Consultivo e contencioso estratégico, fim-a-fim.</p>
 						</div>
 					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- Vídeos (História + Áreas de atuação) -->
+		<section id="videos" class="py-20 md:py-24 bg-brand-cream scroll-mt-24">
+			<div class="max-w-7xl mx-auto px-6 lg:px-8">
+				<div class="text-center max-w-3xl mx-auto">
+					<h2 class="font-display text-3xl md:text-4xl font-bold text-brand-ink">Conheça o Escritório</h2>
+					<span class="mt-4 block h-[2px] w-16 bg-brand-red mx-auto"></span>
+					<p class="mt-4 text-neutral-700">
+						Assista aos vídeos e entenda como podemos ajudar você com estratégia, clareza e foco em resultado.
+					</p>
+				</div>
+
+				<div class="mt-12 grid lg:grid-cols-2 gap-10 items-start">
+					<!-- Vídeo: Como tudo começou -->
+					<div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+						<div class="p-7">
+							<h3 class="font-display text-2xl font-bold text-brand-ink">Como tudo começou</h3>
+							<p class="mt-2 text-neutral-600">
+								Nossa história, propósito e o jeito Moraes &amp; Ramos de fazer advocacia.
+							</p>
+						</div>
+
+						<div class="px-7 pb-7">
+							<div class="relative w-full overflow-hidden rounded-2xl bg-black/5">
+								<!-- Vertical (1080x1920) - altura automática via aspect-ratio -->
+								<div class="relative w-full" style="aspect-ratio: 9 / 16;">
+									<video
+										class="absolute inset-0 h-full w-full object-cover"
+										controls
+										playsinline
+										preload="metadata"
+										controlsList="nodownload"
+									>
+										<source src="<?php echo esc_url( $video_historia ); ?>" type="video/mp4" />
+										Seu navegador não suporta vídeo HTML5.
+									</video>
+								</div>
+							</div>
+
+							<div class="mt-6">
+								<!-- TEXTO BRANCO (garantido) -->
+								<a href="#contato"
+									class="inline-flex items-center justify-center rounded-full bg-brand-red px-6 py-3 font-semibold text-white shadow hover:bg-brand-red900 transition"
+									style="color:#fff !important;">
+									Fale com uma especialista
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Vídeo: Áreas de atuação -->
+					<div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+						<div class="p-7">
+							<h3 class="font-display text-2xl font-bold text-brand-ink">Áreas de atuação</h3>
+							<p class="mt-2 text-neutral-600">
+								Veja de forma prática como atuamos e quais frentes atendemos com mais frequência.
+							</p>
+						</div>
+
+						<div class="px-7 pb-7">
+							<div class="relative w-full overflow-hidden rounded-2xl bg-black/5">
+								<!-- Vertical (1080x1920) - altura automática via aspect-ratio -->
+								<div class="relative w-full" style="aspect-ratio: 9 / 16;">
+									<video
+										class="absolute inset-0 h-full w-full object-cover"
+										controls
+										playsinline
+										preload="metadata"
+										controlsList="nodownload"
+										poster="https://moraesramosadvocacia.com.br/wp-content/uploads/2026/01/poster_areas_de_atuacao.png"
+									>
+										<source src="<?php echo esc_url( $video_areas ); ?>" type="video/mp4" />
+										Seu navegador não suporta vídeo HTML5.
+									</video>
+								</div>
+							</div>
+
+							<div class="mt-6">
+								<a href="#areas" class="inline-flex items-center justify-center rounded-full border border-neutral-300 px-6 py-3 font-semibold text-brand-ink hover:bg-neutral-50 transition">
+									Ver especialidades abaixo
+								</a>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</section>
@@ -120,6 +226,7 @@ get_header();
 							Planejamento de aposentadoria, benefícios do INSS (BPC/LOAS), revisões e mais.
 						</p>
 					</div>
+
 					<!-- Empresarial -->
 					<div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
 						<div class="h-14 w-14 flex items-center justify-center rounded-full bg-brand-red/10 text-brand-red mb-5">
@@ -133,6 +240,7 @@ get_header();
 							Assessoria a empresas e empreendedores, contratos e segurança jurídica para crescer.
 						</p>
 					</div>
+
 					<!-- Consumidor -->
 					<div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
 						<div class="h-14 w-14 flex items-center justify-center rounded-full bg-brand-red/10 text-brand-red mb-5">
@@ -145,6 +253,7 @@ get_header();
 							Bancário, transporte de passageiros, negativações indevidas e mais.
 						</p>
 					</div>
+
 					<!-- Saúde -->
 					<div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
 						<div class="h-14 w-14 flex items-center justify-center rounded-full bg-brand-red/10 text-brand-red mb-5">
@@ -157,6 +266,15 @@ get_header();
 							Contra planos de saúde: negativas de cobertura, liminares e defesa do paciente.
 						</p>
 					</div>
+				</div>
+
+				<div class="mt-12 text-center">
+					<!-- TEXTO BRANCO (garantido) -->
+					<a href="#contato"
+						class="inline-flex items-center justify-center rounded-full bg-brand-red px-6 py-3 font-semibold text-white shadow hover:bg-brand-red900 transition"
+						style="color:#fff !important;">
+						Fale com uma especialista
+					</a>
 				</div>
 			</div>
 		</section>
@@ -184,6 +302,7 @@ get_header();
 							</p>
 						</div>
 					</div>
+
 					<!-- Nicole -->
 					<div class="flex flex-col md:flex-row items-center text-center md:text-left gap-8">
 						<img class="w-48 h-48 rounded-full object-cover object-top shadow-xl" src="<?php echo esc_url( 'https://moraesramosadvocacia.com.br/wp-content/uploads/2025/12/nicole.jpg' ); ?>" alt="Dra. Nicole Moraes" />
@@ -196,6 +315,7 @@ get_header();
 							</p>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</section>
@@ -227,7 +347,7 @@ get_header();
 					<h2 class="font-display text-3xl md:text-4xl font-bold text-brand-ink">Agende sua Consulta</h2>
 					<span class="mt-4 block h-[2px] w-16 bg-brand-red"></span>
 					<p class="mt-6 text-lg text-neutral-700">
-						Dê o primeiro passo para resolver seu problema. Fale conosco pelo formulário ou em nossos canais oficiais.
+						Dê o primeiro passo para resolver seu problema. Fale conosco pelo formulário ou diretamente no WhatsApp de uma de nossas profissionais.
 					</p>
 
 					<div class="mt-8 space-y-6">
@@ -246,15 +366,29 @@ get_header();
 							</div>
 						</a>
 
-						<a href="https://wa.me/5585XXXXXXXX" target="_blank" rel="noopener" class="flex items-start gap-4 group">
+						<!-- WhatsApp - Kamila -->
+						<a href="<?php echo esc_url( 'https://wa.me/' . $whats_kamila . '?text=' . $whats_msg ); ?>" target="_blank" rel="noopener" class="flex items-start gap-4 group">
 							<span class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-red/10 text-brand-red group-hover:bg-brand-red group-hover:text-white transition">
 								<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path stroke-linecap="round" stroke-linejoin="round" d="M16.862 12.487c-.21-.105-1.236-.61-1.427-.681-.191-.07-.33-.105-.468.106-.14.21-.536.68-.657.82-.121.14-.242.158-.453.053-.21-.105-.888-.327-1.693-1.044-.626-.557-1.049-1.245-1.17-1.456-.122-.21-.013-.325.092-.43.095-.095.21-.245.315-.367.105-.122.14-.21.21-.351.07-.14.035-.263-.018-.368-.053-.105-.468-1.13-.642-1.547-.169-.407-.341-.352-.468-.358l-.399-.007c-.14 0-.368.053-.561.263-.191.21-.735.718-.735 1.75 0 1.032.753 2.03.858 2.17.105.14 1.48 2.256 3.586 3.161 2.106.905 2.106.604 2.486.566.38-.037 1.236-.5 1.41-.982.175-.482.175-.895.122-.982-.053-.088-.192-.14-.403-.245z" />
+									<path stroke-linecap="round" stroke-linejoin="round" d="M16.862 12.487c-.21-.105-1.236-.61-1.427-.681-.191-.07-.33-.105-.468.106-.14.21-.536.68-.657.82-.121.14-.242.158-.453.053-.21-.105-.888-.327-1.693-1.044-.626-.557-1.049-1.245-1.17-1.456-.122-.210-.013-.325.092-.43.095-.095.21-.245.315-.367.105-.122.14-.21.21-.351.07-.14.035-.263-.018-.368-.053-.105-.468-1.13-.642-1.547-.169-.407-.341-.352-.468-.358l-.399-.007c-.14 0-.368.053-.561.263-.191.21-.735.718-.735 1.75 0 1.032.753 2.03.858 2.17.105.14 1.48 2.256 3.586 3.161 2.106.905 2.106.604 2.486.566.38-.037 1.236-.5 1.41-.982.175-.482.175-.895.122-.982-.053-.088-.192-.14-.403-.245z" />
 								</svg>
 							</span>
 							<div>
-								<h3 class="font-semibold text-brand-ink">WhatsApp</h3>
-								<p class="text-neutral-700">(85) 9XXXX-XXXX</p>
+								<h3 class="font-semibold text-brand-ink">WhatsApp — Kamila</h3>
+								<p class="text-neutral-700">(85) 99255-4242</p>
+							</div>
+						</a>
+
+						<!-- WhatsApp - Nicole -->
+						<a href="<?php echo esc_url( 'https://wa.me/' . $whats_nicole . '?text=' . $whats_msg ); ?>" target="_blank" rel="noopener" class="flex items-start gap-4 group">
+							<span class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-red/10 text-brand-red group-hover:bg-brand-red group-hover:text-white transition">
+								<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M16.862 12.487c-.21-.105-1.236-.61-1.427-.681-.191-.07-.33-.105-.468.106-.14.21-.536.68-.657.82-.121.14-.242.158-.453.053-.21-.105-.888-.327-1.693-1.044-.626-.557-1.049-1.245-1.17-1.456-.122-.210-.013-.325.092-.43.095-.095.21-.245.315-.367.105-.122.14-.21.210-.351.070-.14.035-.263-.018-.368-.053-.105-.468-1.13-.642-1.547-.169-.407-.341-.352-.468-.358l-.399-.007c-.14 0-.368.053-.561.263-.191.21-.735.718-.735 1.75 0 1.032.753 2.03.858 2.17.105.14 1.48 2.256 3.586 3.161 2.106.905 2.106.604 2.486.566.38-.037 1.236-.5 1.41-.982.175-.482.175-.895.122-.982-.053-.088-.192-.14-.403-.245z" />
+								</svg>
+							</span>
+							<div>
+								<h3 class="font-semibold text-brand-ink">WhatsApp — Nicole</h3>
+								<p class="text-neutral-700">(85) 99114-4047</p>
 							</div>
 						</a>
 
@@ -298,6 +432,110 @@ get_header();
 				</div>
 			</div>
 		</section>
+
+		<!-- Botão flutuante do WhatsApp (mais aparente e direto) -->
+		<div class="fixed z-50 right-5 bottom-5">
+			<div class="relative">
+				<button
+					id="waToggle"
+					type="button"
+					class="inline-flex items-center gap-3 rounded-full bg-brand-red px-5 py-4 text-white shadow-2xl hover:bg-brand-red900 transition focus:outline-none focus:ring-4 focus:ring-brand-red/30"
+					aria-haspopup="dialog"
+					aria-expanded="false"
+					aria-controls="waPanel"
+				>
+					<!-- Ícone -->
+					<svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path d="M12 2a10 10 0 00-8.66 15.02L2 22l5.13-1.29A10 10 0 1012 2zm0 18a8 8 0 01-4.07-1.11l-.29-.17-3.04.77.81-2.96-.19-.31A8 8 0 1112 20zm4.39-5.46c-.24-.12-1.4-.69-1.62-.77-.22-.08-.38-.12-.54.12-.16.24-.62.77-.76.93-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.18-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.47-.38-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.1 3.62 2.41 1.04 2.41.69 2.84.65.44-.04 1.41-.58 1.61-1.12.2-.54.2-1 .14-1.12-.06-.1-.22-.16-.46-.28z"/>
+					</svg>
+					<span class="font-semibold whitespace-nowrap">Fale com uma especialista</span>
+				</button>
+
+				<!-- Painel com as duas opções -->
+				<div
+					id="waPanel"
+					class="hidden absolute bottom-full right-0 mb-3 w-72 rounded-2xl bg-white shadow-2xl ring-1 ring-black/5 overflow-hidden"
+					role="dialog"
+					aria-label="Escolha uma especialista"
+				>
+					<div class="p-4 border-b border-neutral-100">
+						<p class="font-semibold text-brand-ink">Escolha uma especialista</p>
+						<p class="text-sm text-neutral-600">Você será direcionado ao WhatsApp.</p>
+					</div>
+
+					<div class="p-3 space-y-2">
+						<a
+							class="flex items-center justify-between rounded-xl px-4 py-3 hover:bg-neutral-50 transition"
+							target="_blank"
+							rel="noopener"
+							href="<?php echo esc_url( 'https://wa.me/' . $whats_kamila . '?text=' . $whats_msg ); ?>"
+						>
+							<span class="font-semibold text-brand-ink">Kamila</span>
+							<span class="text-sm text-neutral-500">(85) 99255-4242</span>
+						</a>
+
+						<a
+							class="flex items-center justify-between rounded-xl px-4 py-3 hover:bg-neutral-50 transition"
+							target="_blank"
+							rel="noopener"
+							href="<?php echo esc_url( 'https://wa.me/' . $whats_nicole . '?text=' . $whats_msg ); ?>"
+						>
+							<span class="font-semibold text-brand-ink">Nicole</span>
+							<span class="text-sm text-neutral-500">(85) 99114-4047</span>
+						</a>
+					</div>
+
+					<div class="p-3 pt-0">
+						<button id="waClose" type="button" class="w-full rounded-xl border border-neutral-200 px-4 py-2 font-semibold text-neutral-700 hover:bg-neutral-50 transition">
+							Fechar
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<script>
+			(function () {
+				var btn = document.getElementById('waToggle');
+				var panel = document.getElementById('waPanel');
+				var closeBtn = document.getElementById('waClose');
+
+				if (!btn || !panel) return;
+
+				function openPanel() {
+					panel.classList.remove('hidden');
+					btn.setAttribute('aria-expanded', 'true');
+				}
+
+				function closePanel() {
+					panel.classList.add('hidden');
+					btn.setAttribute('aria-expanded', 'false');
+				}
+
+				btn.addEventListener('click', function (e) {
+					e.stopPropagation();
+					var isOpen = btn.getAttribute('aria-expanded') === 'true';
+					if (isOpen) closePanel();
+					else openPanel();
+				});
+
+				if (closeBtn) {
+					closeBtn.addEventListener('click', function (e) {
+						e.stopPropagation();
+						closePanel();
+					});
+				}
+
+				document.addEventListener('click', function () {
+					closePanel();
+				});
+
+				document.addEventListener('keydown', function (e) {
+					if (e.key === 'Escape') closePanel();
+				});
+			})();
+		</script>
 
 	<?php else : ?>
 

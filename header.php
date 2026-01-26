@@ -87,10 +87,10 @@
 					<?php
 					$custom_logo_id = get_theme_mod( 'custom_logo' );
 					if ( $custom_logo_id ) :
-						echo wp_get_attachment_image( $custom_logo_id, 'full', false, array( 'class' => 'h-12 w-auto' ) );
+						echo wp_get_attachment_image( $custom_logo_id, 'full', false, array( 'class' => 'h-16 w-auto' ) );
 					else :
 					?>
-						<img src="<?php echo esc_url( 'https://moraesramosadvocacia.com.br/wp-content/uploads/2025/12/LOGO-4-scaled.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="h-12 w-auto" />
+						<img src="<?php echo esc_url( 'https://moraesramosadvocacia.com.br/wp-content/uploads/2025/12/LOGO-4-scaled-e1769432428641.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="h-16 w-auto" />
 					<?php endif; ?>
 				</a>
 
